@@ -5,7 +5,6 @@ import useContentful from "../../services/useContentful";
 const ProyectsListPage = () => {
   const [proyects, setProyects] = useState([]);
   const { getProyects } = useContentful();
-  console.log(proyects[0]);
   useEffect(() => {
     getProyects()
       .then((response) => {
