@@ -20,11 +20,13 @@ const ProyectsListPage = () => {
         <div key={proyect.proyectName}>
           <h1>{proyect.proyectName}</h1>
           <p>{proyect.proyectDescription}</p>
-          <img
-            width={"100%"}
-            src={proyect.projectImage.fields.file.url}
-            alt="no image found"
-          />
+          {proyect.projectImage ? (
+            <img
+              width={"100%"}
+              src={proyect.projectImage.fields.file.url}
+              alt="no image found"
+            />
+          ) : null}
         </div>
       ))}
     </Container>
