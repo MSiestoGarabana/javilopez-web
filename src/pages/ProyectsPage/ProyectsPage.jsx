@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Container } from "@mui/material";
-import proyectsService from "../../services/proyects.services";
 import useContentful from "../../services/useContentful";
 const ProyectsListPage = () => {
   const [proyects, setProyects] = useState([]);
