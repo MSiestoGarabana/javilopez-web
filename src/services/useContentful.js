@@ -1,4 +1,6 @@
 import { createClient } from "contentful";
+import dotenv from "dotenv";
+
 const useContentful = () => {
   const client = createClient({
     space: "iopcml84o5md",
@@ -23,6 +25,30 @@ const useContentful = () => {
     }
   };
 
-  return { getProyects };
+  const getSponsors = async () => {
+    try {
+      const entries = await client.getEntries({
+        content_type: "javiLopezSponsor",
+        select: "fields",
+      });
+
+      const sanitizedEntries = entries.items.map((item) => {
+        console.log("map item", item.fields);
+        return {
+          ...item.fields.nombreDeSponsors,
+        };
+      });
+      console.log("sanitized", sanitizedEntries);
+
+      return entries;
+    } catch (error) {
+      console.log(`Error fetching sponsors ${error}`);
+    }
+  };
+
+  return {
+    getProyects,
+    getSponsors,
+  };
 };
 export default useContentful;
