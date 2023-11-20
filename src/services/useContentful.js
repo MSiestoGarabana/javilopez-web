@@ -8,15 +8,21 @@ const useContentful = () => {
     host: "cdn.contentful.com",
   });
 
-  const getProyects = async () => {
+  const getProjects = async () => {
     try {
       const entries = await client.getEntries({
-        content_type: "javiLopezProyect",
+        content_type: "javiLopezProject",
         select: "fields",
       });
       const sanitizedEntries = entries.items.map((item) => {
+        console.log("ITEM", item);
+        const image = item.fields.projectImage?.fields.file.url;
+        const { projectDescription, projectTitle } = item?.fields;
+        console.log("DESCRIPTION", projectDescription, "Title", projectTitle);
         return {
-          ...item.fields,
+          projectDescription,
+          projectTitle,
+          image,
         };
       });
       return sanitizedEntries;
@@ -33,12 +39,10 @@ const useContentful = () => {
       });
 
       const sanitizedEntries = entries.items.map((item) => {
-        console.log("map item", item.fields);
         return {
           ...item.fields.nombreDeSponsors,
         };
       });
-      console.log("sanitized", sanitizedEntries);
 
       return entries;
     } catch (error) {
@@ -47,7 +51,7 @@ const useContentful = () => {
   };
 
   return {
-    getProyects,
+    getProjects,
     getSponsors,
   };
 };

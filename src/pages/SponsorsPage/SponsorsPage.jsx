@@ -3,7 +3,6 @@ import useContentful from "../../services/useContentful";
 
 const Sponsors = () => {
   const [sponsors, setSponsors] = useState([]);
-  console.log(sponsors);
 
   const { getSponsors } = useContentful();
   useEffect(() => {
