@@ -6,10 +6,14 @@ import "./Carousel.css";
 const Carousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);
 
-  useEffect(() => {
+  function showSlideNodes() {
     if (emblaApi) {
       console.log(emblaApi.slideNodes());
     }
+  }
+
+  useEffect(() => {
+    showSlideNodes();
   }, [emblaApi]);
   return (
     <div className="embla" ref={emblaRef}>
