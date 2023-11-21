@@ -15,10 +15,8 @@ const useContentful = () => {
         select: "fields",
       });
       const sanitizedEntries = entries.items.map((item) => {
-        console.log("ITEM", item);
         const image = item.fields.projectImage?.fields.file.url;
         const { projectDescription, projectTitle } = item?.fields;
-        console.log("DESCRIPTION", projectDescription, "Title", projectTitle);
         return {
           projectDescription,
           projectTitle,
@@ -50,9 +48,28 @@ const useContentful = () => {
     }
   };
 
+  const getHomePhotos = async () => {
+    try {
+      const entries = await client.getEntries({
+        content_type: "javiLopezFotoHome",
+        select: "fields",
+      });
+
+      const sanitizedEntries = entries.items[0].fields.homeFoto.map(
+        (photoInfo) => {
+          return photoInfo.fields.file.url;
+        }
+      );
+
+      return sanitizedEntries;
+    } catch (error) {
+      console.log(`Error fetching home photos ${error}`);
+    }
+  };
   return {
     getProjects,
     getSponsors,
+    getHomePhotos,
   };
 };
 export default useContentful;
