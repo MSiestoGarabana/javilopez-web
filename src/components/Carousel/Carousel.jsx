@@ -29,13 +29,19 @@ const Carousel = () => {
   }, []);
 
   return (
-    //<div className="embla__slide">Slide 1</div>
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
         {homePhotos.map((homePhoto) => {
           return (
-            <div className="embla__slide">
-              <img className="embla__photo" src={homePhoto} />
+            <div
+              key={homePhoto}
+              className="embla__slide"
+              style={{
+                backgroundImage: `url(${homePhoto})`,
+                backgroundSize: "cover",
+              }}
+            >
+              <p>hey</p>
             </div>
           );
         })}

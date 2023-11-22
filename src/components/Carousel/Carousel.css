@@ -3,11 +3,14 @@
   }
 .embla__container {
     display: flex;
+    height: 100vh;
+    width: 100vw;
   }
 .embla__slide {
     flex: 0 0 100%;
     min-width: 0;
+    height: 100%;
   }
 .embla__photo{
-  height: 100vh;
+  width: 100vw;
 }
