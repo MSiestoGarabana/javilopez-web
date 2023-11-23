@@ -28,13 +28,19 @@ function ResponsiveAppBar() {
   return (
     <AppBar position="fixed" sx={{ backgroundColor: "white" }}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar className="navBar__toolBar" disableGutters>
           <Box>
             <Link to="/">
               <img className="navBar__logo" src={javiLogo} />
             </Link>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none", alignItems: "flex-end" },
+              margin: "0px 40vh 0px 50vw",
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
