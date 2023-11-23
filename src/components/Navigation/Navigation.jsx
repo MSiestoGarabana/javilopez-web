@@ -65,21 +65,41 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link to={`/${page}`}>{page}</Link>
+                  <Link className="navBar__Link" to={`/${page}`}>
+                    {page}
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <Button sx={{ my: 2, color: "white", display: "block" }}>
-              <Link to="/Proyectos">Proyectos</Link>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: {
+                xs: "none",
+                md: "flex",
+                flexDirection: "row",
+                alignItems: "flex-end",
+                justifyContent: "space-around",
+              },
+              margin: "0px 20vh 0px 15vw",
+            }}
+          >
+            <Button sx={{ my: 2, color: "black", display: "block" }}>
+              <Link className="navBar__Link" to="/Proyectos">
+                Proyectos
+              </Link>
             </Button>
             <Button sx={{ my: 2, color: "white", display: "block" }}>
-              <Link to="/Sponsors">Sponsors</Link>
+              <Link className="navBar__Link" to="/Sponsors">
+                Sponsors
+              </Link>
             </Button>
             <Button sx={{ my: 2, color: "white", display: "block" }}>
-              <Link to="/Contacto">Contacto</Link>
+              <Link className="navBar__Link" to="/Contacto">
+                Contacto
+              </Link>
             </Button>
           </Box>
         </Toolbar>
