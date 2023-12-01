@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Container } from "@mui/material";
 import useContentful from "../../services/useContentful";
 import "./ProjectsPage.css";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 const ProyectsPage = () => {
   const [projects, setProjects] = useState([]);
@@ -17,16 +18,8 @@ const ProyectsPage = () => {
 
   return (
     <Container className="project__container">
-      <h1>My projects</h1>
-      <hr />
-      {projects?.map((project) => (
-        <div key={project.projectTitle}>
-          <h1>{project.projectTitle}</h1>
-          <p className="project__description">{project.projectDescription}</p>
-          {project.image ? (
-            <img width={"100%"} src={project.image} alt="no image found" />
-          ) : null}
-        </div>
+      {projects.map((project) => (
+        <ProjectCard project={project} />
       ))}
     </Container>
   );
