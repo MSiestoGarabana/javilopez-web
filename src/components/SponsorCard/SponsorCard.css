@@ -1,0 +1,6 @@
+.sponsorCard__body--even{
+    background-color: aqua;
+}
+.sponsorCard__body--odd{
+    background-color: rgb(1, 1, 1);
+}
