@@ -7,7 +7,9 @@ function App() {
   return (
     <>
       <Navigation />
-      <AppRoutes />
+      <div className="bodyContainer">
+        <AppRoutes />
+      </div>
       <Footer />
     </>
   );
