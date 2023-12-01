@@ -1,6 +1,9 @@
 .sponsorCard__body--even{
-    background-color: aqua;
+    display: flex;
+    flex-direction: row-reverse;
 }
 .sponsorCard__body--odd{
-    background-color: rgb(1, 1, 1);
+    display: flex;
+    flex-direction: row;
+
 }
