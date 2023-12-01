@@ -37,12 +37,16 @@ const useContentful = () => {
       });
 
       const sanitizedEntries = entries.items.map((item) => {
+        const { cuerpoDeTextoSponsor, nombreDeSponsor } = item.fields;
+        const sponsorImage = item.fields.sponsorFoto.fields.file.url;
         return {
-          ...item.fields.nombreDeSponsors,
+          nombreDeSponsor,
+          cuerpoDeTextoSponsor,
+          sponsorImage,
         };
       });
 
-      return entries;
+      return sanitizedEntries;
     } catch (error) {
       console.log(`Error fetching sponsors ${error}`);
     }
