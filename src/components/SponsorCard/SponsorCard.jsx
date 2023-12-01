@@ -18,8 +18,8 @@ const SponsorCard = ({ sponsorData, index }) => {
 
   return (
     <div className={`sponsorCard__body--${evenOrOdd()}`}>
-      <img src={sponsorImage} />
-      <div>
+      <img className="sponsorCard__image" src={sponsorImage} />
+      <div className={`sponsorCard__textContainer--${evenOrOdd()}`}>
         <h3>{sponsorName}</h3>
         <p>{sponsorText}</p>
       </div>

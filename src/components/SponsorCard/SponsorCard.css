@@ -1,9 +1,28 @@
 .sponsorCard__body--even{
     display: flex;
     flex-direction: row-reverse;
+    padding: 5%;
 }
 .sponsorCard__body--odd{
     display: flex;
     flex-direction: row;
+    padding: 5%;
+}
 
+.sponsorCard__textContainer--even {
+    text-align: right;
+}
+.sponsorCard__textContainer--odd{
+    text-align: left;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .sponsorCard__body--odd {
+        flex-direction: column;
+    }
+    .sponsorCard__body--even {
+        flex-direction: column;
+    }
 }
