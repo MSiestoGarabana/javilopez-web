@@ -40,9 +40,7 @@ const Carousel = () => {
                 backgroundImage: `url(${homePhoto})`,
                 backgroundSize: "cover",
               }}
-            >
-              <p>hey</p>
-            </div>
+            ></div>
           );
         })}
       </div>

@@ -16,7 +16,6 @@ const Sponsors = () => {
 
   return (
     <div>
-      <p>hey</p>
       {sponsors.map((sponsor, index) => (
         <SponsorCard
           sponsorData={sponsor}
