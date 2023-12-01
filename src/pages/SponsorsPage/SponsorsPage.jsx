@@ -17,8 +17,12 @@ const Sponsors = () => {
   return (
     <div>
       <p>hey</p>
-      {sponsors.map((sponsor) => (
-        <SponsorCard sponsorData={sponsor} key={sponsor.nombreDeSponsor} />
+      {sponsors.map((sponsor, index) => (
+        <SponsorCard
+          sponsorData={sponsor}
+          index={index + 1}
+          key={sponsor.nombreDeSponsor}
+        />
       ))}
     </div>
   );
