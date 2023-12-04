@@ -1,4 +1,12 @@
 .welcomeComponent__body{
     height: 120vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.welcomeComponent__container{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 17% auto auto auto;
 }
