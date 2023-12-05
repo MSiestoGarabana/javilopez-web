@@ -1,3 +1,12 @@
-.aboutMe__container{
+.aboutMe__body{
     height: 100vh;
+    display: flex;
+    justify-content: center;
 }
+
+.aboutMe__textContainer{
+font-size: 1.6em;
+width: 60%;
+margin-top: 16%;
+}
+
