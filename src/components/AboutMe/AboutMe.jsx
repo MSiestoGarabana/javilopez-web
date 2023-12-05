@@ -12,7 +12,7 @@ const AboutMe = () => {
       }}
     >
       <p className="aboutMe__textContainer">
-        En 2019 me adentré en el mundo del e-scooter competitivo, un viaje que
+        "En 2019 me adentré en el mundo del e-scooter competitivo, un viaje que
         transformó mi vida. Como apasionado piloto y entrenador, no solo he
         alcanzado victorias sino que también he compartido mi pasión con
         entusiastas aspirantes, forjando una comunidad de hábiles conductores.
@@ -25,7 +25,7 @@ const AboutMe = () => {
         empujando los límites de la velocidad, la sostenibilidad y la
         emocionante adrenalina de la carretera abierta. Acompáñame en este
         emocionante viaje mientras redefinimos el futuro de las carreras de
-        scooters eléctricos, una emocionante travesía a la vez.
+        scooters eléctricos, una emocionante travesía a la vez."
       </p>
     </div>
   );
