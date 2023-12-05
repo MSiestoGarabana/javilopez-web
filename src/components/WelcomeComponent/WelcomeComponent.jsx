@@ -19,11 +19,21 @@ const WelcomeComponent = () => {
             width: "150px",
             textAlign: "right",
             borderRight: "3px solid white",
+            padding: "10px",
           }}
         >
           Javier López Espinosa
         </h1>
-        <h2 style={{}}> E-Scooter Rider && Coach</h2>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            padding: "20px",
+          }}
+        >
+          <h2> E-Scooter</h2>
+          <h2 style={{}}>Rider & Coach</h2>
+        </div>
       </div>
     </div>
   );
