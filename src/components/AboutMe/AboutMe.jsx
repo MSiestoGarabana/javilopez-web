@@ -1,5 +1,7 @@
 import React from "react";
 import aboutMeBackground from "../../media/aboutMeBackground.jpg";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 import "./AboutMe.css";
 
 const AboutMe = () => {
@@ -27,6 +29,11 @@ const AboutMe = () => {
         emocionante viaje mientras redefinimos el futuro de las carreras de
         scooters eléctricos, una emocionante travesía a la vez."
       </p>
+      <Button sx={{ my: 2, color: "white", display: "block" }}>
+        <Link className="aboutme__link" to="/Contacto">
+          Contacta conmigo
+        </Link>
+      </Button>
     </div>
   );
 };
