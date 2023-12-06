@@ -1,3 +1,4 @@
-.project__description{
-    overflow-wrap: break-word;
+.projectPage__container{
+    background-color: aqua;
+    width: 1000px;
 }

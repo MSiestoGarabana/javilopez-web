@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Container } from "@mui/material";
 import useContentful from "../../services/useContentful";
-import "./ProjectsPage.css";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import background from "../../media/background.jpg";
+
+import "./ProjectsPage.css";
 
 const ProyectsPage = () => {
   const [projects, setProjects] = useState([]);
@@ -17,11 +19,16 @@ const ProyectsPage = () => {
   }, []);
 
   return (
-    <Container className="project__container">
-      {projects.map((project) => (
-        <ProjectCard project={project} />
-      ))}
-    </Container>
+    <div
+      className="projectPage__background"
+      style={{ backgroundImage: `url(${background})` }}
+    >
+      <Container className="projectPage__container">
+        {projects.map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </Container>
+    </div>
   );
 };
 

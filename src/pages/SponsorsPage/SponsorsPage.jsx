@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useContentful from "../../services/useContentful";
 import SponsorCard from "../../components/SponsorCard/SponsorCard";
+import background from "../../media/background.jpg";
 
 const Sponsors = () => {
   const [sponsors, setSponsors] = useState([]);
@@ -15,7 +16,7 @@ const Sponsors = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ backgroundImage: `url(${background})` }}>
       {sponsors.map((sponsor, index) => (
         <SponsorCard
           sponsorData={sponsor}
