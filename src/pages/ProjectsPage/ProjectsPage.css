@@ -1,3 +1,6 @@
-.projectPage__container{
-    width: 1000px;
+.projectPage__background{
+    position: absolute;
+    width: 100vw;
 }
+
+

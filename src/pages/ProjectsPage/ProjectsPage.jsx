@@ -23,7 +23,7 @@ const ProyectsPage = () => {
       className="projectPage__background"
       style={{ backgroundImage: `url(${background})` }}
     >
-      <Container className="projectPage__container">
+      <Container>
         {projects.map((project) => (
           <ProjectCard project={project} />
         ))}
