@@ -20,7 +20,7 @@ const ProyectsPage = () => {
 
   return (
     <div
-      className="projectPage__background"
+      className="projectPage__body"
       style={{ backgroundImage: `url(${background})` }}
     >
       <Container>
