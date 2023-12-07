@@ -6,6 +6,7 @@ const SponsorCard = ({ sponsorData, index }) => {
   const {
     nombreDeSponsor: sponsorName,
     cuerpoDeTextoSponsor: sponsorText,
+    enlaceWebSponsor: sponsorURL,
     sponsorImage,
   } = sponsorData;
 

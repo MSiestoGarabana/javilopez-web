@@ -37,11 +37,13 @@ const useContentful = () => {
       });
 
       const sanitizedEntries = entries.items.map((item) => {
-        const { cuerpoDeTextoSponsor, nombreDeSponsor } = item.fields;
+        const { cuerpoDeTextoSponsor, nombreDeSponsor, enlaceWebSponsor } =
+          item.fields;
         const sponsorImage = item.fields.sponsorFoto.fields.file.url;
         return {
           nombreDeSponsor,
           cuerpoDeTextoSponsor,
+          enlaceWebSponsor,
           sponsorImage,
         };
       });
