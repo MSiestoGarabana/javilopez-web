@@ -9,7 +9,7 @@ const SponsorCard = ({ sponsorData, index }) => {
     enlaceWebSponsor: sponsorURL,
     sponsorImage,
   } = sponsorData;
-
+  console.log(sponsorURL);
   function evenOrOdd() {
     if (index % 2 === 0) {
       return "even";
@@ -20,11 +20,17 @@ const SponsorCard = ({ sponsorData, index }) => {
 
   return (
     <Card className={`sponsorCard__body--${evenOrOdd()}`}>
-      <img className="sponsorCard__image" src={sponsorImage} />
-      <div className={`sponsorCard__textContainer--${evenOrOdd()}`}>
-        <h3>{sponsorName}</h3>
-        <p>{sponsorText}</p>
-      </div>
+      <a
+        href={sponsorURL}
+        className="sponsorCard__link--container"
+        target="_blank"
+      >
+        <img className="sponsorCard__image" src={sponsorImage} />
+        <div className={`sponsorCard__textContainer--${evenOrOdd()}`}>
+          <h3>{sponsorName}</h3>
+          <p>{sponsorText}</p>
+        </div>
+      </a>
     </Card>
   );
 };
