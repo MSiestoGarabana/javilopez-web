@@ -32,7 +32,7 @@ const WelcomeComponent = () => {
           }}
         >
           <h2> E-Scooter</h2>
-          <h2 style={{}}>Rider & Coach</h2>
+          <h2 style={{ width: "100%", margin: "1%" }}>Rider & Coach</h2>
         </div>
       </div>
     </div>

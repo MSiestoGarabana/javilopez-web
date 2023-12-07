@@ -1,14 +1,14 @@
 import React from "react";
 import AboutMe from "../../components/AboutMe/AboutMe";
 import WelcomeComponent from "../../components/WelcomeComponent/WelcomeComponent";
-import CheckMyProjects from "../../components/CheckMyProjects/CheckMyProjects";
+import ProyectsAndSponsors from "../../components/ProyectsAndSponsors/ProyectsAndSponsors";
 
 const Home = () => {
   return (
     <div>
       <WelcomeComponent />
       <AboutMe />
-      <CheckMyProjects />
+      <ProyectsAndSponsors />
     </div>
   );
 };

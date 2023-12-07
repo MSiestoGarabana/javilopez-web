@@ -9,7 +9,6 @@ const SponsorCard = ({ sponsorData, index }) => {
     enlaceWebSponsor: sponsorURL,
     sponsorImage,
   } = sponsorData;
-  console.log(sponsorURL);
   function evenOrOdd() {
     if (index % 2 === 0) {
       return "even";
