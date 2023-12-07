@@ -1,4 +1,5 @@
 import React from "react";
+import { Card } from "@mui/material";
 import "./SponsorCard.css";
 
 const SponsorCard = ({ sponsorData, index }) => {
@@ -17,13 +18,13 @@ const SponsorCard = ({ sponsorData, index }) => {
   }
 
   return (
-    <div className={`sponsorCard__body--${evenOrOdd()}`}>
+    <Card className={`sponsorCard__body--${evenOrOdd()}`}>
       <img className="sponsorCard__image" src={sponsorImage} />
       <div className={`sponsorCard__textContainer--${evenOrOdd()}`}>
         <h3>{sponsorName}</h3>
         <p>{sponsorText}</p>
       </div>
-    </div>
+    </Card>
   );
 };
 
