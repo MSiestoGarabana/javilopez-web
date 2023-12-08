@@ -21,3 +21,19 @@
     align-items: center;
     width: 50%;
 }
+
+@media only screen and (max-width: 900px) {
+    .contactCard__body{
+        width: 80%;
+        margin-top: 20vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contactCard__body{
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

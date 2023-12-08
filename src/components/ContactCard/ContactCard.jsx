@@ -1,8 +1,8 @@
 import React from "react";
 import { Card } from "@mui/material";
-import "./ContactCard.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MailIcon from "@mui/icons-material/Mail";
+import "./ContactCard.css";
 
 const ContactCard = () => {
   return (
