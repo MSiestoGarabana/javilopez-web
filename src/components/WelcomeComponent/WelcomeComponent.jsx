@@ -3,17 +3,19 @@ import welcomeBackgroundImage from "../../media/welcomeHomeBackground.jpg";
 import "./WelcomeComponent.css";
 
 const WelcomeComponent = () => {
+  const isMobile = window.innerWidth <= 600;
+  console.log(isMobile);
+
+  const styles = {
+    backgroundImage: `url(${welcomeBackgroundImage})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: isMobile ? "-350px -70px" : "center -90px",
+  };
+
   return (
-    <div
-      className="welcomeComponent__body"
-      style={{
-        backgroundImage: `url(${welcomeBackgroundImage})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center -90px",
-      }}
-    >
-      <div className="welcomeComponent__container">
+    <div className="welcomeComponent__body" style={styles}>
+      <div className="welcomeComponent__container--text">
         <h1
           style={{
             width: "150px",

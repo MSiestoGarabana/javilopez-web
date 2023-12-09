@@ -3,6 +3,7 @@ import "./Sponsors.css";
 import sponsorsImage from "../../media/sponsors.jpg";
 import sponsorsBackground from "../../media/sponsorsBackground.jpg";
 
+//TODO: LOS NOMBRES DE ARCHIVO DE SPONSORS Y SPONSORSCARD DAN LUGAR A CONFUSIÓN
 const Sponsors = () => {
   return (
     <div className="sponsors__body">

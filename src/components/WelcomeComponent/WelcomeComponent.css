@@ -4,9 +4,10 @@
     display: flex;
     justify-content: center;
 }
-.welcomeComponent__container{
+.welcomeComponent__container--text{
     color: white;
     display: flex;
     flex-direction: row;
-    margin: 17% auto auto auto;
+    margin: 32vh auto auto auto;
 }
+
