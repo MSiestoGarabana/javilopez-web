@@ -5,8 +5,20 @@
     flex-direction: row;
 }
 .proyects__container--text{
+    display: flex;
+    flex-direction: column;
     width: 60% ;
+    padding: 10%;
 }
 .proyects__container--image{
     width: 40%;
+}
+.proyects__link{
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    border: 5px solid black;
+    font-size: medium;
+    font-weight: 900;
+    padding: 1em;
 }
