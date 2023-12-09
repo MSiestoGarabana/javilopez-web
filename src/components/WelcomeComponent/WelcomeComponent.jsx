@@ -10,7 +10,7 @@ const WelcomeComponent = () => {
     backgroundImage: `url(${welcomeBackgroundImage})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: isMobile ? "-350px -70px" : "center -90px",
+    backgroundPosition: isMobile ? "-350px -50px" : "center -90px",
   };
 
   return (
