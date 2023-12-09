@@ -15,6 +15,7 @@ width: 60%;
 }
 .aboutMe__link{
     color: black;
+    background-color: white;
     text-decoration: none;
     border: 5px solid black;
     font-size: large;
