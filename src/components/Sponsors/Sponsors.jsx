@@ -3,6 +3,7 @@ import sponsorsImage from "../../media/sponsors.jpg";
 import sponsorsBackground from "../../media/sponsorsBackground.jpg";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+
 import "./Sponsors.css";
 
 //TODO: LOS NOMBRES DE ARCHIVO DE SPONSORS Y SPONSORSCARD DAN LUGAR A CONFUSIÓN
