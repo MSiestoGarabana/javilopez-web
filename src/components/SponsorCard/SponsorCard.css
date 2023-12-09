@@ -3,14 +3,17 @@
     display: flex;
     flex-direction: row-reverse;
     width: 85%;
-    padding: 5%;
+    padding: 3%;
 }
 .sponsorCard__body--odd{
     margin: 10%;
     display: flex;
     flex-direction: row;
     width: 85%;
-    padding: 5%;
+    padding: 3%;
+}
+.sponsorCard__image{
+    width: 50%;
 }
 
 .sponsorCard__textContainer--even {
@@ -30,9 +33,25 @@
 
 @media only screen and (max-width: 900px) {
     .sponsorCard__body--odd {
+        background-color: aqua;
         flex-direction: column;
     }
     .sponsorCard__body--even {
         flex-direction: column;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .sponsorCard__link--container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sponsorCard__textContainer--even{
+        text-align: center;
+    }
+    .sponsorCard__textContainer--odd{
+        text-align: center;
+    }
+    .sponsorCard__image{
+      background-color: aquamarine;
     }
 }
