@@ -30,7 +30,7 @@ const AboutMe = () => {
         emocionante carrera a la vez."
       </p>
       <Button sx={{ my: 2, color: "white", display: "block" }}>
-        <Link className="aboutme__link" to="/Contacto">
+        <Link className="aboutMe__link" to="/Contacto">
           Contacta conmigo
         </Link>
       </Button>
