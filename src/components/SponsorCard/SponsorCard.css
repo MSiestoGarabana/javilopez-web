@@ -33,10 +33,11 @@
 
 @media only screen and (max-width: 900px) {
     .sponsorCard__body--odd {
-        background-color: aqua;
+        margin-top: 15%;
         flex-direction: column;
     }
     .sponsorCard__body--even {
+        margin-top: 15%;
         flex-direction: column;
     }
 }
@@ -50,8 +51,5 @@
     }
     .sponsorCard__textContainer--odd{
         text-align: center;
-    }
-    .sponsorCard__image{
-      background-color: aquamarine;
     }
 }
