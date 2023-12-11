@@ -9,6 +9,7 @@ import {
   Menu,
   Container,
   Button,
+  Select,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import javiLogo from "../../media/javiLogo.jpeg";
@@ -16,7 +17,7 @@ import "./Navigation.css";
 
 const pages = ["Proyectos", "Sponsors", "Contacto"];
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({ language, setLanguage }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -25,6 +26,11 @@ function ResponsiveAppBar() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+  const handleSelectChange = (event) => {
+    const selectedLanguage = event.target.value;
+    console.log(selectedLanguage);
+    setLanguage(selectedLanguage);
   };
 
   return (
@@ -79,6 +85,10 @@ function ResponsiveAppBar() {
                 </MenuItem>
               ))}
             </Menu>
+            <Select value={language} onChange={handleSelectChange}>
+              <MenuItem value={"Spanish"}>Spanish</MenuItem>
+              <MenuItem value={"English"}>English</MenuItem>
+            </Select>
           </Box>
 
           <Box
@@ -110,6 +120,10 @@ function ResponsiveAppBar() {
               </Link>
             </Button>
           </Box>
+          <Select value={language} onChange={handleSelectChange}>
+            <MenuItem value={"Spanish"}>Spanish</MenuItem>
+            <MenuItem value={"English"}>English</MenuItem>
+          </Select>
         </Toolbar>
       </Container>
     </AppBar>
