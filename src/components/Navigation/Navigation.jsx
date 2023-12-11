@@ -1,13 +1,15 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
+import {
+  MenuItem,
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Menu,
+  Container,
+  Button,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import javiLogo from "../../media/javiLogo.jpeg";
 import "./Navigation.css";

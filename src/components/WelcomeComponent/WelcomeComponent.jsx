@@ -4,7 +4,6 @@ import "./WelcomeComponent.css";
 
 const WelcomeComponent = () => {
   const isMobile = window.innerWidth <= 600;
-  console.log(isMobile);
 
   const styles = {
     backgroundImage: `url(${welcomeBackgroundImage})`,

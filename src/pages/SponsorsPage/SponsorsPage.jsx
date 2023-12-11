@@ -11,7 +11,6 @@ const Sponsors = () => {
   useEffect(() => {
     getSponsors()
       .then((data) => {
-        console.log("data en sponsor page", data);
         setSponsors(data);
       })
       .catch((error) => console.log(error));

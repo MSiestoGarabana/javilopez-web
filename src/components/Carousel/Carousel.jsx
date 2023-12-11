@@ -8,7 +8,6 @@ const Carousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);
   const { getHomePhotos } = useContentful();
   const [homePhotos, setHomePhotos] = useState([]);
-  console.log("HOMEPHOTOS", homePhotos);
 
   function showSlideNodes() {
     if (emblaApi) {
