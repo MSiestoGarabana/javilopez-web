@@ -25,7 +25,7 @@ const ProyectsPage = ({ language }) => {
     >
       <Container>
         {projects.map((project) => (
-          <ProjectCard project={project} />
+          <ProjectCard project={project} language={language} />
         ))}
       </Container>
     </div>
