@@ -13,11 +13,9 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import spainLogo from "../../media/espana.png";
-import ukLogo from "../../media/reino-unido.png";
+import ukLogo from "../../media/uk.png";
 import javiLogo from "../../media/javiLogo.jpeg";
 import "./Navigation.css";
-
-const pages = ["Proyectos", "Sponsors", "Contacto"];
 
 function ResponsiveAppBar({ language, setLanguage }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -121,93 +119,87 @@ function ResponsiveAppBar({ language, setLanguage }) {
                 <img
                   src={spainLogo}
                   alt="Spain_Flag_Logo"
-                  className="navBar__logo--country"
+                  className="navBar__selectLanguage--logo"
                 />
               </MenuItem>
               <MenuItem value={"English"}>
                 <img
                   src={ukLogo}
                   alt="UK_Flag_Logo"
-                  className="navBar__logo--country"
+                  className="navBar__selectLanguage--logo"
                 />
               </MenuItem>
             </Select>
           </Box>
-          {language === "Spanish" ? (
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: {
-                  xs: "none",
-                  md: "flex",
-                  flexDirection: "row",
-                  alignItems: "flex-end",
-                  justifyContent: "space-around",
-                },
-                margin: "0px 20vh 0px 15vw",
-              }}
-            >
-              <Button sx={{ my: 2, color: "black", display: "block" }}>
-                <Link className="navBar__Link" to="/Proyectos">
-                  Proyectos
-                </Link>
-              </Button>
-              <Button sx={{ my: 2, color: "white", display: "block" }}>
-                <Link className="navBar__Link" to="/Sponsors">
-                  Sponsors
-                </Link>
-              </Button>
-              <Button sx={{ my: 2, color: "white", display: "block" }}>
-                <Link className="navBar__Link" to="/Contacto">
-                  Contacto
-                </Link>
-              </Button>
-            </Box>
-          ) : (
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: {
-                  xs: "none",
-                  md: "flex",
-                  flexDirection: "row",
-                  alignItems: "flex-end",
-                  justifyContent: "space-around",
-                },
-                margin: "0px 20vh 0px 15vw",
-              }}
-            >
-              <Button sx={{ my: 2, color: "black", display: "block" }}>
-                <Link className="navBar__Link" to="/Proyectos">
-                  Proyects
-                </Link>
-              </Button>
-              <Button sx={{ my: 2, color: "white", display: "block" }}>
-                <Link className="navBar__Link" to="/Sponsors">
-                  Sponsors
-                </Link>
-              </Button>
-              <Button sx={{ my: 2, color: "white", display: "block" }}>
-                <Link className="navBar__Link" to="/Contacto">
-                  Contact Me
-                </Link>
-              </Button>
-            </Box>
-          )}
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: {
+                xs: "none",
+                md: "flex",
+                flexDirection: "row",
+                alignItems: "flex-end",
+                justifyContent: "space-around",
+              },
+              margin: "0px 20vh 0px 15vw",
+            }}
+          >
+            {language === "Spanish" ? (
+              <>
+                <Button sx={{ my: 2, color: "black", display: "block" }}>
+                  <Link className="navBar__Link" to="/Proyectos">
+                    Proyectos
+                  </Link>
+                </Button>
+                <Button sx={{ my: 2, color: "white", display: "block" }}>
+                  <Link className="navBar__Link" to="/Sponsors">
+                    Sponsors
+                  </Link>
+                </Button>
+                <Button sx={{ my: 2, color: "white", display: "block" }}>
+                  <Link className="navBar__Link" to="/Contacto">
+                    Contacto
+                  </Link>
+                </Button>
+              </>
+            ) : (
+              <>
+                <Button sx={{ my: 2, color: "black", display: "block" }}>
+                  <Link className="navBar__Link" to="/Proyectos">
+                    Proyects
+                  </Link>
+                </Button>
+                <Button sx={{ my: 2, color: "white", display: "block" }}>
+                  <Link className="navBar__Link" to="/Sponsors">
+                    Sponsors
+                  </Link>
+                </Button>
+                <Button sx={{ my: 2, color: "white", display: "block" }}>
+                  <Link className="navBar__Link" to="/Contacto">
+                    Contact Me
+                  </Link>
+                </Button>
+              </>
+            )}
+          </Box>
 
-          <Select value={language} onChange={handleSelectChange}>
+          <Select
+            value={language}
+            onChange={handleSelectChange}
+            className="navBar__selectLanguage--body"
+          >
             <MenuItem value={"Spanish"}>
               <img
                 src={spainLogo}
                 alt="Spain_Flag_Logo"
-                className="navBar__logo--country"
+                className="navBar__selectLanguage--logo"
               />
             </MenuItem>
             <MenuItem value={"English"}>
               <img
                 src={ukLogo}
                 alt="UK_Flag_Logo"
-                className="navBar__logo--country"
+                className="navBar__selectLanguage--logo"
               />
             </MenuItem>
           </Select>
