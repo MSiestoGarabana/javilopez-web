@@ -16,11 +16,13 @@ const useContentful = () => {
       });
       const sanitizedEntries = entries.items.map((item) => {
         const image = item.fields.projectImage?.fields.file.url;
-        const { projectDescription, projectTitle } = item?.fields;
+        const { projectDescription, projectTitle, inglesProjectDescription } =
+          item?.fields;
         return {
           projectDescription,
           projectTitle,
           image,
+          inglesProjectDescription,
         };
       });
       return sanitizedEntries;
@@ -37,14 +39,19 @@ const useContentful = () => {
       });
 
       const sanitizedEntries = entries.items.map((item) => {
-        const { cuerpoDeTextoSponsor, nombreDeSponsor, enlaceWebSponsor } =
-          item.fields;
+        const {
+          cuerpoDeTextoSponsor,
+          nombreDeSponsor,
+          enlaceWebSponsor,
+          inglesCuerpoDeTextoDeSponsor,
+        } = item.fields;
         const sponsorImage = item.fields.sponsorFoto.fields.file.url;
         return {
           nombreDeSponsor,
           cuerpoDeTextoSponsor,
           enlaceWebSponsor,
           sponsorImage,
+          inglesCuerpoDeTextoDeSponsor,
         };
       });
 

@@ -2,10 +2,11 @@ import React from "react";
 import { Card } from "@mui/material";
 import "./SponsorCard.css";
 
-const SponsorCard = ({ sponsorData, index }) => {
+const SponsorCard = ({ sponsorData, index, language }) => {
   const {
     nombreDeSponsor: sponsorName,
     cuerpoDeTextoSponsor: sponsorText,
+    inglesCuerpoDeTextoDeSponsor: englishSponsorText,
     enlaceWebSponsor: sponsorURL,
     sponsorImage,
   } = sponsorData;
@@ -16,18 +17,22 @@ const SponsorCard = ({ sponsorData, index }) => {
       return "odd";
     }
   }
-
+  console.log(index);
   return (
-    <Card className={`sponsorCard__body--${evenOrOdd()}`}>
+    <Card className={`sponsorCard__body`}>
       <a
         href={sponsorURL}
-        className="sponsorCard__link--container"
+        className={`sponsorCard__linkContainer--${evenOrOdd()}`}
         target="_blank"
       >
         <img className="sponsorCard__image" src={sponsorImage} />
-        <div className={`sponsorCard__textContainer--${evenOrOdd()}`}>
+        <div className={`sponsorCard__container--info${evenOrOdd()}`}>
           <h3>{sponsorName}</h3>
-          <p>{sponsorText}</p>
+          {language === "Spanish" ? (
+            <p className="sponsorCard__container--text">{sponsorText}</p>
+          ) : (
+            <p>{englishSponsorText}</p>
+          )}
         </div>
       </a>
     </Card>

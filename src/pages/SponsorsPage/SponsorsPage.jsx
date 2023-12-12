@@ -4,7 +4,7 @@ import SponsorCard from "../../components/SponsorCard/SponsorCard";
 import background from "../../media/background.jpg";
 import "./SponsorPage.css";
 
-const Sponsors = () => {
+const Sponsors = ({ language }) => {
   const [sponsors, setSponsors] = useState([]);
 
   const { getSponsors } = useContentful();
@@ -23,6 +23,7 @@ const Sponsors = () => {
     >
       {sponsors.map((sponsor, index) => (
         <SponsorCard
+          language={language}
           sponsorData={sponsor}
           index={index + 1}
           key={sponsor.nombreDeSponsor}

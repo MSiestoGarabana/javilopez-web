@@ -6,7 +6,7 @@ import background from "../../media/background.jpg";
 
 import "./ProjectsPage.css";
 
-const ProyectsPage = () => {
+const ProyectsPage = ({ language }) => {
   const [projects, setProjects] = useState([]);
   const { getProjects } = useContentful();
 
