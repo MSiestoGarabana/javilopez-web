@@ -5,10 +5,10 @@ import ProjectsPage from "../pages/ProjectsPage/ProjectsPage";
 import SponsorsPage from "../pages/SponsorsPage/SponsorsPage";
 import ContactPage from "../pages/ContactPage/ContactPage";
 
-const AppRoutes = () => {
+const AppRoutes = ({ language }) => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<HomePage language={language} />} />
       <Route path="/Proyectos" element={<ProjectsPage />} />
       <Route path="/Sponsors" element={<SponsorsPage />} />
       <Route path="/Contacto" element={<ContactPage />} />

@@ -4,13 +4,14 @@ import WelcomeComponent from "../../components/WelcomeComponent/WelcomeComponent
 import Proyects from "../../components/Proyects/Proyects";
 import Sponsors from "../../components/Sponsors/Sponsors";
 
-const Home = () => {
+const Home = ({ language }) => {
+  console.log(language);
   return (
     <div>
-      <WelcomeComponent />
-      <AboutMe />
-      <Proyects />
-      <Sponsors />
+      <WelcomeComponent language={language} />
+      <AboutMe language={language} />
+      <Proyects language={language} />
+      <Sponsors language={language} />
     </div>
   );
 };

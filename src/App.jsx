@@ -6,12 +6,11 @@ import { useState } from "react";
 
 function App() {
   const [language, setLanguage] = useState("Spanish");
-  console.log(language);
   return (
     <>
       <Navigation language={language} setLanguage={setLanguage} />
       <div className="bodyContainer">
-        <AppRoutes />
+        <AppRoutes language={language} />
       </div>
       <Footer />
     </>
