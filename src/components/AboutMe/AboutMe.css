@@ -18,6 +18,7 @@
     background-color: white;
     text-decoration: none;
     border: 5px solid black;
+    border-radius: 10px;
     font-size: large;
     font-weight: 900;
     padding: 1em;

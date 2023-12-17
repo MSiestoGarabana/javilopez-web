@@ -42,12 +42,6 @@ function ResponsiveAppBar({ language, setLanguage }) {
             </Link>
           </Box>
           {/* MENUICON BOX */}
-          {/* <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-            }}
-          > */}
           <>
             <Box
               className="navBar__container--menuIcon"
@@ -144,7 +138,7 @@ function ResponsiveAppBar({ language, setLanguage }) {
                 alignItems: "flex-end",
                 justifyContent: "space-around",
               },
-              margin: "0px 20vh 0px 15vw",
+              margin: "0px 25% 0px 25%",
             }}
           >
             {language === "Spanish" ? (
@@ -201,9 +195,14 @@ function ResponsiveAppBar({ language, setLanguage }) {
                 src={spainLogo}
                 alt="Spain_Flag_Logo"
                 className="navBar__selectLanguage--logo"
-              />
+              />{" "}
             </MenuItem>
-            <MenuItem value={"English"}>
+            <MenuItem
+              value={"English"}
+              sx={{
+                backgrounColor: "black",
+              }}
+            >
               <img
                 src={ukLogo}
                 alt="UK_Flag_Logo"
