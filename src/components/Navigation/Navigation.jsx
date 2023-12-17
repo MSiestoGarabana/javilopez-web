@@ -34,97 +34,107 @@ function ResponsiveAppBar({ language, setLanguage }) {
 
   return (
     <AppBar position="fixed" sx={{ backgroundColor: "white" }}>
-      <Container maxWidth="xl">
-        <Toolbar className="navBar__toolBar" disableGutters>
+      <Container
+        maxWidth="xl"
+        sx={{ display: "flex", justifyContent: "space-between" }}
+      >
+        <Toolbar
+          className="navBar__toolBar"
+          disableGutters
+          sx={{
+            width: "100%",
+          }}
+        >
           <Box>
             <Link to="/" sx={{ display: "block" }}>
               <img className="navBar__logo" src={javiLogo} />
             </Link>
           </Box>
           {/* MENUICON BOX */}
-          <>
-            <Box
-              className="navBar__container--menuIcon"
+          <Box
+            className="navBar__container--menuIcon"
+            sx={{
+              flexGrow: 1,
+              display: {
+                xs: "flex",
+                md: "none",
+                justifyContent: "end",
+              },
+              boxSizing: "content-box",
+              "@media (max-width: 800px)": {},
+            }}
+          >
+            <IconButton
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="black"
+            >
+              <MenuIcon
+                sx={{
+                  width: "50px",
+                  height: "50px",
+                }}
+              />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
               sx={{
-                flexGrow: 1,
-                display: { xs: "flex", md: "none", alignItems: "flex-end" },
-                marginLeft: "60%",
-                boxSizing: "content-box",
-                "@media (max-width: 800px)": {},
+                display: { xs: "block", md: "none" },
               }}
             >
-              <IconButton
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleOpenNavMenu}
-                color="black"
-              >
-                <MenuIcon
-                  sx={{
-                    width: "50px",
-                    height: "50px",
-                  }}
-                />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: "block", md: "none" },
-                }}
-              >
-                {language === "Spanish" ? (
-                  <>
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Link className="navBar__Link" to="/Proyectos">
-                        Proyectas
-                      </Link>
-                    </MenuItem>
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Link className="navBar__Link" to="/Sponsors">
-                        Sponsors
-                      </Link>
-                    </MenuItem>
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Link className="navBar__Link" to="/Contacto">
-                        Contacto
-                      </Link>
-                    </MenuItem>
-                  </>
-                ) : (
-                  <>
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Link className="navBar__Link" to="/Proyectos">
-                        Proyects
-                      </Link>
-                    </MenuItem>
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Link className="navBar__Link" to="/Sponsors">
-                        Sponsors
-                      </Link>
-                    </MenuItem>
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Link className="navBar__Link" to="/Contacto">
-                        Contact
-                      </Link>
-                    </MenuItem>
-                  </>
-                )}
-              </Menu>
-            </Box>
-          </>
+              {language === "Spanish" ? (
+                <>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Link className="navBar__Link" to="/Proyectos">
+                      Proyectas
+                    </Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Link className="navBar__Link" to="/Sponsors">
+                      Sponsors
+                    </Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Link className="navBar__Link" to="/Contacto">
+                      Contacto
+                    </Link>
+                  </MenuItem>
+                </>
+              ) : (
+                <>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Link className="navBar__Link" to="/Proyectos">
+                      Proyects
+                    </Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Link className="navBar__Link" to="/Sponsors">
+                      Sponsors
+                    </Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Link className="navBar__Link" to="/Contacto">
+                      Contact
+                    </Link>
+                  </MenuItem>
+                </>
+              )}
+            </Menu>
+          </Box>
           {/* END OF MENU ICON BOX */}
 
           {/* NAVBAR BUTTON , SPANISH AND ENGLISH */}
@@ -135,10 +145,13 @@ function ResponsiveAppBar({ language, setLanguage }) {
                 xs: "none",
                 md: "flex",
                 flexDirection: "row",
-                alignItems: "flex-end",
                 justifyContent: "space-around",
               },
-              margin: "0px 25% 0px 25%",
+              margin: "0px 250px",
+
+              "@media (max-width: 1250px)": { margin: "0px 200px" },
+              "@media (max-width: 1050px)": { margin: "0px 150px" },
+              "@media (max-width: 1000px)": { margin: "0px 100px" },
             }}
           >
             {language === "Spanish" ? (
