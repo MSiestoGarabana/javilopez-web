@@ -100,7 +100,7 @@ function ResponsiveAppBar({ language, setLanguage }) {
                 <>
                   <MenuItem onClick={handleCloseNavMenu}>
                     <Link className="navBar__Link" to="/Proyectos">
-                      Proyectas
+                      Proyectos
                     </Link>
                   </MenuItem>
                   <MenuItem onClick={handleCloseNavMenu}>
