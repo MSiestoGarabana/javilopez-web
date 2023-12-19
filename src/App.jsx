@@ -1,8 +1,8 @@
-import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer/Footer";
 import AppRoutes from "./routes/AppRoutes";
 import { useState } from "react";
+import "./App.css";
 
 function App() {
   const [language, setLanguage] = useState("Spanish");
