@@ -61,7 +61,6 @@ function ResponsiveAppBar({ language, setLanguage }) {
                 justifyContent: "end",
               },
               boxSizing: "content-box",
-              "@media (max-width: 800px)": {},
             }}
           >
             <IconButton
@@ -75,6 +74,11 @@ function ResponsiveAppBar({ language, setLanguage }) {
                 sx={{
                   width: "50px",
                   height: "50px",
+                  marginRight: "25px",
+                  "@media (max-width: 750px)": {
+                    width: "30px",
+                    height: "30px",
+                  },
                 }}
               />
             </IconButton>
@@ -201,6 +205,12 @@ function ResponsiveAppBar({ language, setLanguage }) {
             className="navBar__selectLanguage--body"
             sx={{
               width: "100px",
+              marginRight: "25px",
+              "@media (max-width: 750px)": {
+                width: "60px",
+                height: "60px",
+                marginRight: "10px",
+              },
             }}
           >
             <MenuItem value={"Spanish"}>
@@ -208,7 +218,7 @@ function ResponsiveAppBar({ language, setLanguage }) {
                 src={spainLogo}
                 alt="Spain_Flag_Logo"
                 className="navBar__selectLanguage--logo"
-              />{" "}
+              />
             </MenuItem>
             <MenuItem
               value={"English"}

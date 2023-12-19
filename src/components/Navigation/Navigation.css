@@ -12,13 +12,13 @@
     text-decoration: none;
 }
 
-.navBar__selectLanguage--body{
-    width: 7%;
-}
 .navBar__selectLanguage--logo{
     width: 30px;
     height: 25px;
 }
-@media only screen and (max-width: 400px) {
-    
+@media only screen and (max-width: 750px) {
+    .navBar__selectLanguage--logo{
+        width: 20px;
+        height: 15px;
+    }
 }
