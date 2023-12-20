@@ -37,14 +37,16 @@
     }
 }
 @media only screen and (max-width: 750px) {
-    .sponsorCard__link--container{
+    .sponsorCard__linkContainer--odd{
         flex-direction: column;
         align-items: center;
     }
-    .sponsorCard__textContainer--even{
-        text-align: center;
+    .sponsorCard__linkContainer--even{
+        flex-direction: column;
+        align-items: center;
     }
-    .sponsorCard__textContainer--odd{
-        text-align: center;
+    .sponsorCard__container--infoeven {
+        text-align: left;
     }
+    
 }
