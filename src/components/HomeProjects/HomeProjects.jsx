@@ -4,7 +4,7 @@ import proyectsBackgroundImage from "../../media/Riding.jpg";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
-import "./Proyects.css";
+import "./HomeProjects.css";
 
 const Proyects = ({ language }) => {
   return (
